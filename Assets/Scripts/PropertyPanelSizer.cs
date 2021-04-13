@@ -21,6 +21,7 @@ public class PropertyPanelSizer : MonoBehaviour
     private void Update()
     {
         float otherElementsHeight = rectTransform.sizeDelta.y - PropertiesRect.sizeDelta.y;
-        PropertiesRect.sizeDelta = new Vector2(PropertiesRect.sizeDelta.x, Mathf.Min(PropertiesContent.sizeDelta.y, maxHeight - otherElementsHeight));
+        float propertiesHeight = Mathf.Min(PropertiesContent.sizeDelta.y, maxHeight - otherElementsHeight);
+        PropertiesRect.sizeDelta = new Vector2(PropertiesRect.sizeDelta.x, propertiesHeight);
     }
 }
