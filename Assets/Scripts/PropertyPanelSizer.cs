@@ -10,7 +10,7 @@ public class PropertyPanelSizer : MonoBehaviour
     public RectTransform PropertiesRect;
     public RectTransform PropertiesContent;
 
-    private float maxHeight { get => ((RectTransform)rectTransform.parent).sizeDelta.y - TopMargin - BottomMargin; }
+    private float maxHeight { get => Screen.height - TopMargin - BottomMargin; }
     private RectTransform rectTransform;
 
     private void Awake()
